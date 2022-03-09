@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>assignment 7 (own)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>assignment 6 other</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -13968,15 +13968,10 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Analysis-of-distribution-of-my-own-dataset">Analysis of distribution of my own dataset<a class="anchor-link" href="#Analysis-of-distribution-of-my-own-dataset">&#182;</a></h1>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13990,10 +13985,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -14045,10 +14041,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">medianPlaytimeFilter</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;median_playtime&#39;</span><span class="p">]</span><span class="o">&gt;</span> <span class="mf">1.5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">medianPlaytimeFilter</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;median_playtime&#39;</span><span class="p">]</span><span class="o">&gt;</span> <span class="mf">0.5</span>
 <span class="n">ownersFilter</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;owners_low&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20000</span> <span class="c1">#lowest range above 0</span>
 <span class="n">noFreeGameFilter</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.1</span>
 <span class="n">reviewFilter</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;positive_ratings&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span>
@@ -14059,11 +14055,74 @@ a.anchor-link {
 </div>
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 27075 entries, 0 to 27074
+Data columns (total 23 columns):
+ #   Column            Non-Null Count  Dtype         
+---  ------            --------------  -----         
+ 0   name              27075 non-null  object        
+ 1   release_date      27075 non-null  datetime64[ns]
+ 2   english           27075 non-null  bool          
+ 3   developer         27075 non-null  object        
+ 4   publisher         27075 non-null  object        
+ 5   platforms         27075 non-null  object        
+ 6   required_age      27075 non-null  int64         
+ 7   categories        27075 non-null  object        
+ 8   genres            27075 non-null  object        
+ 9   steamspy_tags     27075 non-null  object        
+ 10  achievements      27075 non-null  int64         
+ 11  positive_ratings  27075 non-null  int64         
+ 12  negative_ratings  27075 non-null  int64         
+ 13  average_playtime  27075 non-null  int64         
+ 14  median_playtime   27075 non-null  int64         
+ 15  owners            27075 non-null  object        
+ 16  price             27075 non-null  float64       
+ 17  windows           27075 non-null  bool          
+ 18  mac               27075 non-null  bool          
+ 19  linux             27075 non-null  bool          
+ 20  owners_low        27075 non-null  int32         
+ 21  owners_high       27075 non-null  int32         
+ 22  release_year      27075 non-null  int64         
+dtypes: bool(4), datetime64[ns](1), float64(1), int32(2), int64(7), object(8)
+memory usage: 3.8+ MB
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Games-by-year">Games by year<a class="anchor-link" href="#Games-by-year">&#182;</a></h1><p>Exponential curve</p>
-
+<h1 id="The-most-expensive-games">The most expensive games<a class="anchor-link" href="#The-most-expensive-games">&#182;</a></h1>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14071,7 +14130,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;owners_low&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;median_playtime&#39;</span><span class="p">]</span><span class="o">&gt;</span> <span class="mi">30</span><span class="p">][</span><span class="s1">&#39;release_year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">medianPlaytimeFilter</span><span class="p">][[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;price&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;price&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14091,7 +14150,295 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\Stijn\AppData\Local\Temp/ipykernel_11432/3507090343.py:1: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Temp/ipykernel_15472/2212486919.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>df<span class="ansi-yellow-intense-fg ansi-bold">[</span>medianPlaytimeFilter<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;name&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-blue-intense-fg ansi-bold">&#39;price&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>sort_values<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;price&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span>ascending<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">False</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>head<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">10</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;medianPlaytimeFilter&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">series</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;positive_ratings&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">][</span><span class="n">medianPlaytimeFilter</span><span class="p">][</span><span class="s1">&#39;developer&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">series</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span>  <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>C:\Users\Stijn\AppData\Local\Temp/ipykernel_9580/1183673222.py:1: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  series = df[df[&#39;positive_ratings&#39;] &gt; 5][medianPlaytimeFilter][&#39;developer&#39;].value_counts()
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>Valve                                     26
+EnsenaSoft                                26
+Winged Cloud                              17
+Square Enix                               17
+Daedalic Entertainment                    17
+                                          ..
+IMGN.PRO                                   1
+Autumn Moon                                1
+Lord Kres                                  1
+Acido Cinza                                1
+Beijing Litchi Culture Media Co., Ltd.     1
+Name: developer, Length: 4077, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;positive_ratings&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">][</span><span class="n">medianPlaytimeFilter</span><span class="p">][</span><span class="s1">&#39;required_age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>C:\Users\Stijn\AppData\Local\Temp/ipykernel_9580/70254092.py:1: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  df[df[&#39;positive_ratings&#39;] &gt; 5][medianPlaytimeFilter][&#39;required_age&#39;].value_counts()
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>0     5796
+18     186
+16     116
+12      24
+7        4
+3        3
+Name: required_age, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Number-of-paid-and-free-games">Number of paid and free games<a class="anchor-link" href="#Number-of-paid-and-free-games">&#182;</a></h1>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">noFreeGameFilter</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">][</span><span class="n">ownersFilter</span><span class="p">][</span><span class="n">medianPlaytimeFilter</span><span class="p">][</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">][</span><span class="n">ownersFilter</span><span class="p">][</span><span class="n">medianPlaytimeFilter</span><span class="p">][</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>C:\Users\Stijn\AppData\Local\Temp/ipykernel_9580/1283793119.py:1: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  df[noFreeGameFilter][df[&#39;price&#39;] &lt; 200][ownersFilter][medianPlaytimeFilter][&#39;price&#39;].count() , df[df[&#39;price&#39;] &lt; 200][ownersFilter][medianPlaytimeFilter][&#39;price&#39;].count()
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>(3616, 4351)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Amount-of-games-per-year-after-2005">Amount of games per year after 2005<a class="anchor-link" href="#Amount-of-games-per-year-after-2005">&#182;</a></h1>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;release_year&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2005</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;positive_ratings&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">][</span><span class="s1">&#39;release_year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>C:\Users\Stijn\AppData\Local\Temp/ipykernel_9580/4157551761.py:1: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  df[df[&#39;release_year&#39;] &gt; 2005][df[&#39;positive_ratings&#39;] &gt; 5][&#39;release_year&#39;].value_counts().sort_values().plot(kind=&#39;bar&#39;)
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>&lt;AxesSubplot:&gt;</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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l17SU089pZtuukl9fX06d+6c+vv71d/fP+f81NRU3XzzzSoqKlJSUpL+/e9/Sxo/X3M9P3TD9Ob8m+NiLMnJydZjjz1m9fX1WX19fdb58+etDz/80HruueesnJycqP02n6/F4/FY4XDYCofD1te+9jXrwIEDVktLixUKhayqqqo55y9btsxqbW213nrrLWv//v3W/v37rWAwaLW2tlpFRUVzzv/Zz35muVyuSR/bvn37nPPXr19vnThxwtq/f7/V19dnrV271pJkZWZmWs8999yc8/ft22d95StfmfS4zp8/P+f8V1991bryyisnjGdnZ1uvv/76JX9+/rcsWrTI2rFjh9XY2GgNDAxELffgwYMXLDabzZJkLVmyZM4fLEY3TLvM3+RjtaSlpVlLliyJauZk/8NGe0lMTIzcYkhKSrKWL18e+Y8/Wkt2drZVVFRkLV++3MrOzr7o/65ms2RkZFjLly+3Fi9eHPXshQsXWgsXLpz0sWuvvXbejmnRokXWNddcc8mfn/9fvvCFL1jf+c535n0/iYmJVmpqatTy6IaJS9w+kfs/xcXFstvtsixLg4ODamtrI38as/2OgouZz/khP16y4yU/bkt/9erVqqurU09Pj9555x1J469Ouf766/Xggw/qwIEDRud/kmi8uma+8zk/5Mdbdrzkx/yL0aOltrZWq1atUl9f3wXjeXl5evXVV3XjjTcanz+ZhISEqLzWNxb5nB/yL7XsyyE/bks/OTk58vrzj3vnnXe0YMEC4/MfeOABbd68WR999NGEx+69995LPp/zQ/6lmH055Evz/ITEfC1er9c6cuSItWXLFuvee++17r33XmvLli3WkSNHLK/Xa3y+3++3brnllkkf+/vf/37J53N+yL8Usy+H/Li9py9JBQUFuvvuu2W325WQkKBQKKSmpiZ1dnYan5+RkaEzZ87oP//5TxRmGvt8ifND/qWXfTnkx3XpAwBmJ27fkZuWlqZt27aps7NTIyMjGhkZUTAY1LZt27R48WLyySff0Px4nnss8uO29H0+n95//32tXLlSmZmZyszM1G233aYPPvhAL7zwAvlT5L///vtxnc/5If9ynnss8qU5PilwsZaPf6jSbB4jn3zyL+/8eJ57LPLj9kq/r69PP/jBD5SVlRUZy8rK0pYtWzQwMEA++eQbmh/Pc49FftyW/je+8Q1dffXV+tOf/qT33ntP//znP3Xo0CEtWbJE69evJ5988g3Nj+e5xyJfmuNfFS7mcsMNN1hf/epXJ3wA0po1a8gnn3yD8+N57jHIn/sEL8by0EMPWV1dXdbevXut48ePW3fffXfkscOHD5NPPvmG5sfz3GORrygEXJSlvb098lswNzfXCgQC1sMPP2xJ0fvmI/LJJz/+8uN57rHIj9vP3klKStLp06cljT/xsXLlSr344ovKzc2NyjcHkU8++fGZH89zj0V+3D6RGw6HL/hy5tOnT+vOO+9UZmamli5dSj755BuaH89zj0W+NMe/KlysxW63T/lNULfeeiv55JNvaH48zz0W+Xz2DgAYJG5v7wAAZo/SBwCDUPoAYBBKHwAMQukDgEH+C2VugYJCae5RAAAAAElFTkSuQmCC"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Amount-of-games-that-were-played-for-longer-than-30-hours">Amount of games that were played for longer than 30 hours<a class="anchor-link" href="#Amount-of-games-that-were-played-for-longer-than-30-hours">&#182;</a></h1>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">ownersFilter</span><span class="p">][</span><span class="n">medianPlaytimeFilter</span><span class="p">][</span><span class="s1">&#39;release_year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>C:\Users\Stijn\AppData\Local\Temp/ipykernel_9580/3507090343.py:1: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
   df[df[&#39;owners_low&#39;] &gt; 50000][df[&#39;median_playtime&#39;]&gt; 30][&#39;release_year&#39;].value_counts().sort_values().plot(kind=&#39;bar&#39;)
 </pre>
 </div>
@@ -14100,12 +14447,12 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
 
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
 <pre>&lt;AxesSubplot:&gt;</pre>
 </div>
 
@@ -14133,15 +14480,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Prices-of-games">Prices of games<a class="anchor-link" href="#Prices-of-games">&#182;</a></h1><p>logarithmic curve<br>
-(filtered out outliers and the games that nearly nobody owns/playes)</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>It seems there are many free games</p>
-
+<h1 id="Most-positively-reviewed-games">Most positively reviewed games<a class="anchor-link" href="#Most-positively-reviewed-games">&#182;</a></h1>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14149,7 +14488,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">][</span><span class="n">ownersFilter</span><span class="p">][</span><span class="n">medianPlaytimeFilter</span><span class="p">][</span><span class="n">reviewFilter</span><span class="p">][</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;positive_ratings&#39;</span><span class="p">,</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14168,109 +14507,294 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\Stijn\AppData\Local\Temp/ipykernel_9580/3573847891.py:1: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
-  df[df[&#39;price&#39;] &lt; 200][ownersFilter][medianPlaytimeFilter][reviewFilter][&#39;price&#39;].plot(kind=&#39;hist&#39;,bins=13)
-</pre>
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>release_date</th>
+      <th>english</th>
+      <th>developer</th>
+      <th>publisher</th>
+      <th>platforms</th>
+      <th>required_age</th>
+      <th>categories</th>
+      <th>genres</th>
+      <th>steamspy_tags</th>
+      <th>...</th>
+      <th>average_playtime</th>
+      <th>median_playtime</th>
+      <th>owners</th>
+      <th>price</th>
+      <th>windows</th>
+      <th>mac</th>
+      <th>linux</th>
+      <th>owners_low</th>
+      <th>owners_high</th>
+      <th>release_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>25</th>
+      <td>Counter-Strike: Global Offensive</td>
+      <td>2012-08-21</td>
+      <td>True</td>
+      <td>Valve;Hidden Path Entertainment</td>
+      <td>Valve</td>
+      <td>windows;mac;linux</td>
+      <td>0</td>
+      <td>Multi-player;Steam Achievements;Full controlle...</td>
+      <td>Action;Free to Play</td>
+      <td>FPS;Multiplayer;Shooter</td>
+      <td>...</td>
+      <td>22494</td>
+      <td>6502</td>
+      <td>50000000-100000000</td>
+      <td>0.00</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>50000000</td>
+      <td>100000000</td>
+      <td>2012</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Dota 2</td>
+      <td>2013-07-09</td>
+      <td>True</td>
+      <td>Valve</td>
+      <td>Valve</td>
+      <td>windows;mac;linux</td>
+      <td>0</td>
+      <td>Multi-player;Co-op;Steam Trading Cards;Steam W...</td>
+      <td>Action;Free to Play;Strategy</td>
+      <td>Free to Play;MOBA;Strategy</td>
+      <td>...</td>
+      <td>23944</td>
+      <td>801</td>
+      <td>100000000-200000000</td>
+      <td>0.00</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>100000000</td>
+      <td>200000000</td>
+      <td>2013</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Team Fortress 2</td>
+      <td>2007-10-10</td>
+      <td>True</td>
+      <td>Valve</td>
+      <td>Valve</td>
+      <td>windows;mac;linux</td>
+      <td>0</td>
+      <td>Multi-player;Cross-Platform Multiplayer;Steam ...</td>
+      <td>Action;Free to Play</td>
+      <td>Free to Play;Multiplayer;FPS</td>
+      <td>...</td>
+      <td>8495</td>
+      <td>623</td>
+      <td>20000000-50000000</td>
+      <td>0.00</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>20000000</td>
+      <td>50000000</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>12836</th>
+      <td>PLAYERUNKNOWN'S BATTLEGROUNDS</td>
+      <td>2017-12-21</td>
+      <td>True</td>
+      <td>PUBG Corporation</td>
+      <td>PUBG Corporation</td>
+      <td>windows</td>
+      <td>0</td>
+      <td>Multi-player;Online Multi-Player;Stats</td>
+      <td>Action;Adventure;Massively Multiplayer</td>
+      <td>Survival;Shooter;Multiplayer</td>
+      <td>...</td>
+      <td>22938</td>
+      <td>12434</td>
+      <td>50000000-100000000</td>
+      <td>26.99</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>50000000</td>
+      <td>100000000</td>
+      <td>2017</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>Garry's Mod</td>
+      <td>2006-11-29</td>
+      <td>True</td>
+      <td>Facepunch Studios</td>
+      <td>Valve</td>
+      <td>windows;mac;linux</td>
+      <td>0</td>
+      <td>Single-player;Multi-player;Co-op;Cross-Platfor...</td>
+      <td>Indie;Simulation</td>
+      <td>Sandbox;Multiplayer;Funny</td>
+      <td>...</td>
+      <td>12422</td>
+      <td>1875</td>
+      <td>10000000-20000000</td>
+      <td>6.99</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>10000000</td>
+      <td>20000000</td>
+      <td>2006</td>
+    </tr>
+    <tr>
+      <th>2478</th>
+      <td>Grand Theft Auto V</td>
+      <td>2015-04-13</td>
+      <td>True</td>
+      <td>Rockstar North</td>
+      <td>Rockstar Games</td>
+      <td>windows</td>
+      <td>18</td>
+      <td>Single-player;Multi-player;Steam Achievements;...</td>
+      <td>Action;Adventure</td>
+      <td>Open World;Action;Multiplayer</td>
+      <td>...</td>
+      <td>9837</td>
+      <td>4834</td>
+      <td>10000000-20000000</td>
+      <td>24.99</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>10000000</td>
+      <td>20000000</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>1467</th>
+      <td>PAYDAY 2</td>
+      <td>2013-08-13</td>
+      <td>True</td>
+      <td>OVERKILL - a Starbreeze Studio.</td>
+      <td>Starbreeze Publishing AB</td>
+      <td>windows;linux</td>
+      <td>18</td>
+      <td>Single-player;Multi-player;Co-op;Online Co-op;...</td>
+      <td>Action;RPG</td>
+      <td>Co-op;Action;FPS</td>
+      <td>...</td>
+      <td>3975</td>
+      <td>890</td>
+      <td>10000000-20000000</td>
+      <td>7.49</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>10000000</td>
+      <td>20000000</td>
+      <td>2013</td>
+    </tr>
+    <tr>
+      <th>3362</th>
+      <td>Unturned</td>
+      <td>2017-07-07</td>
+      <td>True</td>
+      <td>Smartly Dressed Games</td>
+      <td>Smartly Dressed Games</td>
+      <td>windows;mac;linux</td>
+      <td>0</td>
+      <td>Single-player;Online Multi-Player;Online Co-op...</td>
+      <td>Action;Adventure;Casual;Free to Play;Indie</td>
+      <td>Free to Play;Survival;Zombies</td>
+      <td>...</td>
+      <td>3248</td>
+      <td>413</td>
+      <td>20000000-50000000</td>
+      <td>0.00</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>20000000</td>
+      <td>50000000</td>
+      <td>2017</td>
+    </tr>
+    <tr>
+      <th>1120</th>
+      <td>Terraria</td>
+      <td>2011-05-16</td>
+      <td>True</td>
+      <td>Re-Logic</td>
+      <td>Re-Logic</td>
+      <td>windows;mac;linux</td>
+      <td>0</td>
+      <td>Single-player;Multi-player;Online Multi-Player...</td>
+      <td>Action;Adventure;Indie;RPG</td>
+      <td>Sandbox;Adventure;Survival</td>
+      <td>...</td>
+      <td>5585</td>
+      <td>1840</td>
+      <td>5000000-10000000</td>
+      <td>6.99</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>5000000</td>
+      <td>10000000</td>
+      <td>2011</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Left 4 Dead 2</td>
+      <td>2009-11-19</td>
+      <td>True</td>
+      <td>Valve</td>
+      <td>Valve</td>
+      <td>windows;mac;linux</td>
+      <td>0</td>
+      <td>Single-player;Multi-player;Co-op;Steam Achieve...</td>
+      <td>Action</td>
+      <td>Zombies;Co-op;FPS</td>
+      <td>...</td>
+      <td>1615</td>
+      <td>566</td>
+      <td>10000000-20000000</td>
+      <td>7.19</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>10000000</td>
+      <td>20000000</td>
+      <td>2009</td>
+    </tr>
+  </tbody>
+</table>
+<p>10 rows × 23 columns</p>
 </div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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"
->
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Price-of-payed-games">Price of payed games<a class="anchor-link" href="#Price-of-payed-games">&#182;</a></h1><p>logarithmic curve</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">&gt;</span> <span class="mi">0</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">][</span><span class="n">ownersFilter</span><span class="p">][</span><span class="n">medianPlaytimeFilter</span><span class="p">][</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\Stijn\AppData\Local\Temp/ipykernel_9580/791919376.py:1: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
-  df[df[&#39;price&#39;]&gt; 0][df[&#39;price&#39;] &lt; 200][ownersFilter][medianPlaytimeFilter][&#39;price&#39;].plot(kind=&#39;hist&#39;,bins=13)
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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"
->
 </div>
 
 </div>
